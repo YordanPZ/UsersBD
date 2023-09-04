@@ -1,15 +1,15 @@
 const {getAll,create,getOne,deleteOne,update} = require('../controllers/user.controllers')
 const express = require('express')
 
-const carRouter = express.Router()
+const UserRouter = express.Router()
 
-carRouter.route('/')
+UserRouter.route('/')
     .get(getAll)
     .post(create)
 
-carRouter.route('/:id')
+UserRouter.route('/:id')
     .get(getOne)
     .delete(deleteOne)
     .put(update)
     
-module.exports = carRouter
+module.exports = UserRouter
